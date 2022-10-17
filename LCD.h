@@ -1,13 +1,15 @@
 #include "stm32f30x_conf.h"
 
-typedef struct paddle_s {
-  int x;	// Position from top left point
+typedef struct paddle_s
+{
+	int x; // Position from top left point
 	int y;
 	int width;
 	int height; //// 0->3, gives height of ball in yfield
 } paddle_t;
 
-typedef struct ball_s {
+typedef struct ball_s
+{
 	int x;
 	int y;
 	int dx;
@@ -16,11 +18,11 @@ typedef struct ball_s {
 	int height; // 0->3, gives height of ball in yfield
 } ball_t;
 
-typedef struct field_s {
+typedef struct field_s
+{
 	paddle_t paddle;
-	ball_t	ball;
+	ball_t ball;
 } field_t;
-
 
 void init_LCD(void);
 
